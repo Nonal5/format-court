@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Format court</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<h1>Format court</h1>
+<p>Outil personnel qui génère des vidéos courtes et les envoie en brouillon sur mon compte TikTok.</p>
+<div id="retour" hidden>
+  <h2>Autorisation reçue</h2>
+  <p>Copie l'adresse complète ci-dessous :</p>
+  <code id="url"></code>
+  <p><button onclick="navigator.clipboard.writeText(location.href)">Copier</button></p>
+</div>
+<p><a href="terms.html">Conditions d'utilisation</a> · <a href="privacy.html">Politique de confidentialité</a></p>
+<script>
+if (location.search) {
+  document.getElementById('retour').hidden = false;
+  document.getElementById('url').textContent = location.href;
+}
+</script>
+</body>
+</html>
